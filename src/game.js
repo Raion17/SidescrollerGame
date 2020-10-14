@@ -5,13 +5,11 @@ const gameState = {
 var player;
 
 //TODO play around with the ogre generation and variables
-//var ogre
-//var goblin
 
 function preload () {
-    this.load.image('lizard', '../assets/sprites/heroes/lizard_m_idle_anim_f0.png');
-    this.load.image('goblin', '../assets/sprites/enemies/goblin_idle_anim_f0.png');
-    this.load.image('ogre', '../assets/sprites/enemies/ogre_idle_anim_f0.png');
+    this.load.image('lizard', 'assets/sprites/heroes/lizard_m_idle_anim_f0.png');
+    this.load.image('goblin', 'assets/sprites/enemies/goblin_idle_anim_f0.png');
+    this.load.image('ogre', 'assets/sprites/enemies/ogre_idle_anim_f0.png');
     this.load.image('platform', 'https://s3.amazonaws.com/codecademy-content/courses/learn-phaser/physics/platform.png');
 }
 
@@ -29,14 +27,14 @@ function create () {
     this.physics.add.collider(player, platforms);
 
     //TODO Do not delete this code we are using it to refactor the ogreGeneration function
-    //Goblin and ogre sprite test starts
-    // this.goblin = this.physics.add.sprite(200, 200, 'goblin');
-    // this.goblin.flipX = true;
-    // this.physics.add.collider(this.goblin, platforms);
-    // this.orc = this.physics.add.sprite(250, 200, 'ogre');
-    // this.orc.flipX = true;
-    // this.physics.add.collider(this.orc, platforms);
-    //Goblin and ogre sprite test ends
+    const ogreGen = () => {
+        this.goblin = this.physics.add.sprite(200, 200, 'goblin');
+        this.goblin.flipX = true;
+        this.physics.add.collider(this.goblin, platforms);
+        this.orc = this.physics.add.sprite(250, 200, 'ogre');
+        this.orc.flipX = true;
+        this.physics.add.collider(this.orc, platforms);
+    }
 
     const ogres = this.physics.add.group();
 
@@ -88,7 +86,6 @@ function create () {
 function update () {
     const cursors = this.input.keyboard.createCursorKeys();
 
-    //TODO Jump & dash-jump interaccion por player character need tweaks
     if(cursors.left.isDown){
         player.setVelocityX(-150);
     } else if (cursors.right.isDown){
