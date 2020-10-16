@@ -44,7 +44,7 @@ function create () {
         const xCoord = 650;
         const yCoord = 310;
         let randomOgre = ogreList[Math.floor(Math.random() * 2)];
-        ogres.create(xCoord, yCoord, randomOgre);
+        ogres.create(xCoord, yCoord, randomOgre).setScale(1.5);
     };
 
     const ogreGenLoop = this.time.addEvent({
