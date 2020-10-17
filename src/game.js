@@ -86,12 +86,12 @@ function create () {
 function update () {
     const cursors = this.input.keyboard.createCursorKeys();
 
-    if(cursors.left.isDown){
+    if (cursors.up.isDown && player.body.touching.down){
+        player.setVelocityY(-150);
+    } else if (cursors.left.isDown){
         player.setVelocityX(-150);
     } else if (cursors.right.isDown){
         player.setVelocityX(150);
-    } else if (cursors.up.isDown && player.body.touching.down){
-        player.setVelocityY(-150);
     } else {
         player.setVelocityX(0);
     }
