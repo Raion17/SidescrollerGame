@@ -1,9 +1,26 @@
 # Changelog
-## 0.0.2 - 2020-09-25
+## 0.0.4 - 10-16-2020
+
+#### Fixed:
+- Goblin hitbox.
+- Ogre hitbox.
+
+#### Deprecated:
+- Enemy generation algorithm.
+
+## 0.0.3 - 10-13-2020
 
 #### Added:
+- Score counter
+> Players can now gain score points based on time survived.
+
 #### Removed:
-#### Changed:
+
+- Sprites:
+1. Weapons
+> These were only for visual effects the type of weapon doesn't affect gameplay.
+2. Food
+> This folder contained various food sprites, but they are too many to list them here and most of them weren't used.
 
 ## 0.0.2 - 2020-09-25
 
