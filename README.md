@@ -11,6 +11,10 @@ The main goal of this game is to survive the unending hordes of enemies, to do t
 - Move:  Left key &larr; | &rarr; Right key
 - Jump: Up key &uarr;
 
+## Alpha Version 0.0.4
+By clicking this link you will be redirected to the alpha version of the game.
+[Kingdom Escape](https://kingdomescape.000webhostapp.com/)
+
 ## Contact
 - Zarkkel
 		- Twitter: @zarkkel
